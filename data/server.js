@@ -4,7 +4,7 @@ const countryMapping = [
     {
         country: 'United States of America',
         area: 'American',
-        coide: 'US'
+        code: 'US'
     },
     {
         country: 'United Kingdom',
