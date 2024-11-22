@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings - Site Name</title>
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/settings.css" />
+</head>
+
+<!-- TODO: import header -->
+<body>
+    <h1 class="page-title">Settings</h1>
+    <!-- TODO: auto-fill fields with the stored info -->
+    <div id="settings-container" class="top-level-container">
+        <div id="settings-login-container" class="settings-topic-group">
+            <h2 id="settings-login-title" class="settings-topic-title">Login</h2>
+            <div class="settings-option-group">
+                <label id="settings-username-label" class="settings-label text-label"
+                        for="settings-username">Username:&nbsp;</label>
+                <input id="settings-username-input" class="settings-input text-input"
+                        type="text" name="settings-username" placeholder="Enter a new username" />
+            </div>
+            <div class="settings-option-group">
+                <label id="settings-password-label" class="settings-label text-label"
+                        for="settings-password">Password:&nbsp;</label>
+                <input id="settings-password-input" class="settings-input password-input"
+                        type="password" name="settings-password" placeholder="Enter a new password" />
+            </div>
+        </div>
+        <hr />
+        <div id="settings-location-container" class="settings-topic-group">
+            <h2 id="settings-location-title" class="settings-topic-title">Delivery Location</h2>
+            <div class="settings-option-group">
+                <label id="settings-name-label" class="settings-label text-label"
+                        for="settings-name">Name:&nbsp;</label>
+                <input id="settings-name-input" class="settings-input text-input"
+                        type="text" name="settings-name" placeholder="Enter your name" />
+            </div>
+            <div class="settings-option-group">
+                <label id="settings-address-label" class="settings-label text-label"
+                        for="settings-address">Address:&nbsp;</label>
+                <input id="settings-address-input" class="settings-input text-input"
+                        type="text" name="settings-address" placeholder="Enter your address" />
+            </div>
+            <div class="settings-option-group">
+                <label id="settings-state-label" class="settings-label text-label"
+                        for="settings-state">State/Province:&nbsp;</label>
+                <input id="settings-state-input" class="settings-input text-input"
+                        type="text" name="settings-state" placeholder="Enter your state/province" />
+            </div>
+            <!-- TODO: once we have all the countries, we could make this a searchable dropdown -->
+            <div class="settings-option-group">
+                <label id="settings-country-label" class="settings-label text-label"
+                        for="settings-country">Country:&nbsp;</label>
+                <input id="settings-country-input" class="settings-input text-input"
+                        type="text" name="settings-country" placeholder="Enter your country" />
+            </div>
+        </div>
+        <hr />
+        <div id="settings-payment-container" class="settings-topic-group">
+            <h2 id="settings-payment-title" class="settings-topic-title">Payment</h2>
+            <div class="settings-option-group">
+                <label id="settings-card-num-label" class="settings-label number-label"
+                        for="settings-card-num">Card Number:&nbsp;</label>
+                <input id="settings-card-num-input" class="settings-input text-input"
+                        type="number" name="settings-card-num" placeholder="Enter your card number" />
+            </div>
+            <div class="settings-option-group">
+                <label id="settings-cvc-label" class="settings-label number-label"
+                        for="settings-cvc">CVC/CVV:&nbsp;</label>
+                <input id="settings-cvc-input" class="settings-input text-input"
+                        type="number" name="settings-cvc" placeholder="Enter your card's CVC/CVV" />
+            </div>
+            <div class="settings-option-group">
+                <label id="settings-expiration-label" class="settings-label text-label"
+                        for="settings-expiration">Expiration Date:&nbsp;</label>
+                <input id="settings-expiration-input" class="settings-input text-input"
+                        type="text" name="settings-expiration" placeholder="Enter your card's expiration date" />
+            </div>
+        </div>
+        <!-- TODO: add functionality -->
+        <button id="settings-button" type="button">Update Settings</button>
+    </div>
+    <script src="../scripts/header.js"></script>
+    <script src="../scripts/settings.js"></script>
+</body>
+
+</html>

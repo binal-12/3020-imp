@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search - Site Name</title>
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/search.css" />
+  </head>
+
+  <body>
+    <div class="search-container">
+      <div class="search-header">
+        <h2>Search results for "Carrots"</h2>
+        <div class="sort-container">
+          <label for="search-sort-dropdown" id="sort-by">Sort by:</label>
+          <select id="search-sort-dropdown">
+            <option value="rating">Rating</option>
+            <option value="country-a-z">Country A-Z</option>
+            <option value="country-z-a">Country Z-A</option>
+            <option value="price-low-high">Price: Low to High</option>
+            <option value="price-high-low">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- TODO: close filter functionality -->
+      <div id="filter-panel" class="filter-panel">
+        <div id="filter-menu" class="filter-menu">
+          <div id="filter-header" class="filter-header">
+            <h3 id="filters-title">Filters</h3>
+            <button id="filter-collapse" type="button" onclick="filterHide()">&larr;</button>
+          </div>
+
+          <div id="filter-price-container" class="search-filter-group">
+            Price: <br />
+            <!-- TODO: validate fields -->
+            <label for="price-min">Min:</label>
+            <input
+              type="number"
+              id="price-min"
+              name="price-min"
+              min="0"
+              value="0"
+            />
+            <label for="price-max">Max:</label>
+            <input type="number" id="price-max" name="price-max" min="0" />
+          </div>
+
+          <div id="filter-country" class="search-filter-group">
+            Country: <br />
+            <input
+              class="filter-input checkbox-input country-checkbox"
+              type="checkbox"
+              name="canada"
+              id="canada"
+            />
+            <label class="filter-label checkbox-label" for="canada"
+              >Canada</label
+            ><br />
+            <input
+              class="filter-input checkbox-input country-checkbox"
+              type="checkbox"
+              name="india"
+              id="india"
+            />
+            <label class="filter-label checkbox-label" for="india">India</label>
+          </div>
+
+          <div id="filter-dietary-container" class="search-filter-group">
+            Dietary Restrictions: <br />
+            <input
+              class="filter-input checkbox-input dietary-checkbox"
+              type="checkbox"
+              name="gluten-free"
+              id="gluten-free"
+            />
+            <label class="filter-label checkbox-label" for="gluten-free"
+              >Gluten Free</label
+            ><br />
+            <input
+              class="filter-input checkbox-input dietary-checkbox"
+              type="checkbox"
+              name="nut-free"
+              id="nut-free"
+            />
+            <label class="filter-label checkbox-label" for="nut-free"
+              >Nut Free</label
+            ><br />
+            <input
+              class="filter-input checkbox-input dietary-checkbox"
+              type="checkbox"
+              name="vegetarian"
+              id="vegetarian"
+            />
+            <label class="filter-label checkbox-label" for="vegetarian"
+              >Vegetarian</label
+            ><br />
+            <input
+              class="filter-input checkbox-input dietary-checkbox"
+              type="checkbox"
+              name="vegan"
+              id="vegan"
+            />
+            <label class="filter-label checkbox-label" for="vegan"
+              >Vegan</label
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="products-grid">
+        <div class="item-group search-item-group">
+          <a class="item-link" href="#">
+            <img class="item-img" src="../assets/placeholder.png" />
+          </a>
+        </div>
+        <div class="item-group search-item-group">
+          <a class="item-link" href="#">
+            <img class="item-img" src="../assets/placeholder.png" />
+          </a>
+        </div>
+        <div class="item-group search-item-group">
+          <a class="item-link" href="#">
+            <img class="item-img" src="../assets/placeholder.png" />
+          </a>
+        </div>
+        <div class="item-group search-item-group">
+          <a class="item-link" href="#">
+            <img class="item-img" src="../assets/placeholder.png" />
+          </a>
+        </div>
+        <div class="item-group search-item-group">
+          <a class="item-link" href="#">
+            <img class="item-img" src="../assets/placeholder.png" />
+          </a>
+        </div>
+        <div class="item-group search-item-group">
+          <a class="item-link" href="#">
+            <img class="item-img" src="../assets/placeholder.png" />
+          </a>
+        </div>
+        <div class="item-group search-item-group">
+          <a class="item-link" href="#">
+            <img class="item-img" src="../assets/placeholder.png" />
+          </a>
+        </div>
+        <div class="item-group search-item-group">
+          <a class="item-link" href="#">
+            <img class="item-img" src="../assets/placeholder.png" />
+          </a>
+        </div>
+        <div class="item-group search-item-group">
+          <a class="item-link" href="#">
+            <img class="item-img" src="../assets/placeholder.png" />
+          </a>
+        </div>
+        <div class="item-group search-item-group">
+          <a class="item-link" href="#">
+            <img class="item-img" src="../assets/placeholder.png" />
+          </a>
+        </div>
+        <div class="item-group search-item-group">
+          <a class="item-link" href="#">
+            <img class="item-img" src="../assets/placeholder.png" />
+          </a>
+        </div>
+        <div class="item-group search-item-group">
+          <a class="item-link" href="#">
+            <img class="item-img" src="../assets/placeholder.png" />
+          </a>
+        </div>
+
+        <div class="item-group search-item-group">
+          <a class="item-link" href="#">
+            <img class="item-img" src="../assets/placeholder.png" />
+          </a>
+        </div>
+
+        <div class="item-group search-item-group">
+          <a class="item-link" href="#">
+            <img class="item-img" src="../assets/placeholder.png" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="../scripts/header.js"></script>
+    <script src="../scripts/search.js"></script>
+  </body>
+</html>

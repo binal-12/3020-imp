@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+
+#globe{
+    height: 600px;
+    width: 600px;
+}
+
+.top-level-container {
+    display: grid;
+    grid-template-areas:
+        "globe feature"
+        "browse-buttons browse-buttons"
+        "items items";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr;  
+    gap: 20px;
+}
+#globe-container {
+    grid-area: globe;
+}
+#feature-container{
+    grid-area: feature;
+    background-color: lightgrey;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    text-decoration: none;
+    padding: 3% 4%;
+}
+#featured-recipe-name {
+    margin: 0;
+}
+#featured-recipe-country {
+    margin: 0;
+}
+a {
+   text-decoration: none; 
+}
+#featured-recipe-container {
+    gap: 5px;
+    color: black;
+    text-decoration: none;
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+    "header header"
+    "img description";
+}
+#featured-recipe-header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#featured-recipe-title {
+    font-size: 2rem; 
+    margin: 0; 
+}
+#featured-recipe-flag {
+    height: 100%; 
+    object-fit: contain; 
+    max-height: 3rem;
+    width: auto;
+    border-radius: 0;
+}
+#featured-recipe-img {
+    grid-area: img;
+    max-height: 18rem;
+
+}
+#featured-recipe-content {
+    grid-area: description;
+}
+#browse-buttons-container {
+    grid-area: browse-buttons;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+#browse-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 20px;
+}
+button {
+    background-color: rgb(232, 229, 229);
+    font-size: 16pt;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: hsl(0, 1%, 80%);
+    cursor: pointer;
+}
+.home-featured-items {
+    grid-area: items;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr; 
+    max-height: 100%; 
+}
+.categs-title {
+    grid-row: 1;
+    padding-left: 30px;
+}
+.items-container {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    padding: 0px 30px;
+}
+.items-container > * {
+    margin: 0; 
+}
+.view-more-button{
+    align-self: center;
+    justify-self: center;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+img {
+    border-radius: 20px;
+    max-width: 100%;
+    height: auto;
+}

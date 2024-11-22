@@ -1,0 +1,22 @@
+/* This is a file that can be imported into every page for general styling */
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+}
+
+button{
+    padding: 5px 10px 5px 10px;
+    border-radius: 20px;
+    border: 0 solid #ccc;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: grey;
+    border-radius: 20px;
+}

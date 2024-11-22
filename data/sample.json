@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "carrots",
+        "brand": "always fresh",
+        "imageName": "placeholder.png",
+        "price": 12.38,
+        "count": 6,
+        "country": "Australia",
+        "calories": 100,
+        "ratings": [5, 5, 4, 3, 5],
+        "dietaryProperties": ["gluten-free", "nut-free", "vegetarian", "vegan"]
+    },
+    {
+        "id": 2,
+        "name": "bananas",
+        "brand": "always fresh",
+        "imageName": "bananas.png",
+        "price": 11.51,
+        "count": 8,
+        "country": "Sweden",
+        "calories": 150,
+        "ratings": [5, 4, 3],
+        "dietaryProperties": ["gluten-free", "nut-free", "vegetarian", "vegan"]
+    }
+]

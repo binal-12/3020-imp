@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Site Name</title>
+    <script src="//unpkg.com/globe.gl"></script>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+</head>
+
+<!-- TODO: import header -->
+<!-- TODO: replace hardcoded values with dynamic results -->
+
+<body>
+    <div id="world-container" class="top-level-container home-top-level-container">
+        <div id="globe-container" class="top-group">
+            <!-- TODO: add globe -->
+            <div id="globe"></div>
+            <input id="globe-search" class="home-input text-input" type="text" />
+        </div>
+        <!-- TODO: make this change when a country is selected -->
+         <div id="feature-container" class="top-group">
+            <a id="featured-recipe-link" href="./pages/recipe.html">
+                <div id="featured-recipe-container" class="world-group">
+                    <div id="featured-recipe-header">
+                        <h1 id="featured-recipe-title" class="item-img recipe-img">Recipe of the Week</h1>
+                        <img id="featured-recipe-flag" src="assets/japan_flag.png" alt="japanese flag">
+                    </div>
+                    <img id="featured-recipe-img" class="recipe-img" src="./assets/placeholder.png">
+                    <div id="featured-recipe-content">
+                        <div id="featured-recipe-head">
+                            <h2 id="featured-recipe-name" class="featured-recipe-text">Sushi</h2>
+                            <h4 id="featured-recipe-country" class="featured-recipe-text">Country of Origin: Japan</h4>
+                        </div>
+                        <p id="featured-recipe-desc" class="featured-recipe-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Nulla porta tellus ac lectus dictum, et ultricies sapien interdum. Vestibulum sit amet lacus ac metus dignissim mollis. Nullam ut est dui. Maecenas at erat eu felis fermentum luctus. Etiam ut arcu
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div id="browse-buttons-container" class="top-level-container home-top-level-container">
+        <button id="browse-button" type="button">
+                 <div class = "browse-text">Browse Recipes</div>
+                <img src="assets/recipe-logo.png" alt="recipe logo">
+        </button>
+        <button id="browse-button" type="button">
+                 <div class = "browse-text">Shop Groceries</div>
+                <img src="assets/products-logo.png" alt="products logo">
+        </button>
+    </div>
+    <!-- TODO: move this to JS so we can add more rows dynamically -->
+ 
+    <div id="browse-categories">
+        
+        <div id="home-your-facourite-grocerries-container" class="top-level-container home-top-level-container home-featured-items">
+            <h2 id="home-recipes-title" class="categs-title title">Your favourite groceries</h2>
+            <!-- TODO: add hover functionality to items -->
+            <div id="recipe-items-container" class="items-container">
+                <div class="item-group recipe-item-group grid-item-1">
+                    <a class="item-link recipe-link" href="./pages/recipe.html">
+                        <img class="item-img recipe-img" src="./assets/placeholder.png" />
+                    </a>
+                </div>
+                
+                <div class="item-group recipe-item-group grid-item-1">
+                    <a class="item-link recipe-link" href="./pages/recipe.html">
+                        <img class="item-img recipe-img" src="./assets/placeholder.png" />
+                    </a>
+                </div>
+                
+                <div class="item-group recipe-item-group grid-item-2">
+                    <a class="item-link recipe-link" href="./pages/recipe.html">
+                        <img class="item-img recipe-img" src="./assets/placeholder.png" />
+                    </a>
+                </div>
+                
+                <div class="item-group recipe-item-group grid-item-3">
+                    <a class="item-link recipe-link" href="./pages/recipe.html">
+                        <img class="item-img recipe-img" src="./assets/placeholder.png" />
+                    </a>
+                </div>
+    
+                <div class="item-group recipe-item-group grid-item-4">
+                    <a class="item-link recipe-link" href="./pages/recipe.html">
+                        <img class="item-img recipe-img" src="./assets/placeholder.png" />
+                    </a>
+                </div>
+                
+                <!-- View More button -->
+                <button id="recipe-view-more-button" class="view-more-button" type="button">
+                    <div class="right-arrow">&#8594;</div><br>
+                    <div class="view-more-text">View More</div>
+                </button>
+            </div>
+        </div>
+        <div id="home-recipes-container" class="top-level-container home-top-level-container home-featured-items">
+            <h2 id="home-recipes-title" class="categs-title title">Recipes that use 'Your favourite groceries'</h2>
+            <!-- TODO: add hover functionality to items -->
+            <div id="recipe-items-container" class="items-container">
+                <div class="item-group recipe-item-group grid-item-1">
+                    <a class="item-link recipe-link" href="./pages/recipe.html">
+                        <img class="item-img recipe-img" src="./assets/placeholder.png" />
+                    </a>
+                </div><div class="item-group recipe-item-group grid-item-1">
+                    <a class="item-link recipe-link" href="./pages/recipe.html">
+                        <img class="item-img recipe-img" src="./assets/placeholder.png" />
+                    </a>
+                </div>
+                
+                <div class="item-group recipe-item-group grid-item-2">
+                    <a class="item-link recipe-link" href="./pages/recipe.html">
+                        <img class="item-img recipe-img" src="./assets/placeholder.png" />
+                    </a>
+                </div>
+                
+                <div class="item-group recipe-item-group grid-item-3">
+                    <a class="item-link recipe-link" href="./pages/recipe.html">
+                        <img class="item-img recipe-img" src="./assets/placeholder.png" />
+                    </a>
+                </div>
+    
+                <div class="item-group recipe-item-group grid-item-4">
+                    <a class="item-link recipe-link" href="./pages/recipe.html">
+                        <img class="item-img recipe-img" src="./assets/placeholder.png" />
+                    </a>
+                </div>
+                
+                <!-- View More button -->
+                <button id="recipe-view-more-button" class="view-more-button" type="button">
+                    <div class="right-arrow">&#8594;</div><br>
+                    <div class="view-more-text">View More</div>
+                </button>
+            </div>
+        </div>
+        <div id="home-recipes-container" class="top-level-container home-top-level-container home-featured-items">
+            <h2 id="home-recipes-title" class="categs-title title">Top recipes</h2>
+            <!-- TODO: add hover functionality to items -->
+            <div id="recipe-items-container" class="items-container">
+                <div class="item-group recipe-item-group grid-item-1">
+                    <a class="item-link recipe-link" href="./pages/recipe.html">
+                        <img class="item-img recipe-img" src="./assets/placeholder.png" />
+                    </a>
+                </div><div class="item-group recipe-item-group grid-item-1">
+                    <a class="item-link recipe-link" href="./pages/recipe.html">
+                        <img class="item-img recipe-img" src="./assets/placeholder.png" />
+                    </a>
+                </div>
+                
+                <div class="item-group recipe-item-group grid-item-2">
+                    <a class="item-link recipe-link" href="./pages/recipe.html">
+                        <img class="item-img recipe-img" src="./assets/placeholder.png" />
+                    </a>
+                </div>
+                
+                <div class="item-group recipe-item-group grid-item-3">
+                    <a class="item-link recipe-link" href="./pages/recipe.html">
+                        <img class="item-img recipe-img" src="./assets/placeholder.png" />
+                    </a>
+                </div>
+    
+                <div class="item-group recipe-item-group grid-item-4">
+                    <a class="item-link recipe-link" href="./pages/recipe.html">
+                        <img class="item-img recipe-img" src="./assets/placeholder.png" />
+                    </a>
+                </div>
+                
+                <!-- View More button -->
+                <button id="recipe-view-more-button" class="view-more-button" type="button">
+                    <div class="right-arrow">&#8594;</div><br>
+                    <div class="view-more-text">View More</div>
+                </button>
+            </div>
+        </div>
+        <div id="home-recipes-container" class="top-level-container home-top-level-container home-featured-items">
+            <h2 id="home-recipes-title" class="categs-title title">Today's deals</h2>
+            <!-- TODO: add hover functionality to items -->
+            <div id="recipe-items-container" class="items-container">
+                <div class="item-group recipe-item-group grid-item-1">
+                    <a class="item-link recipe-link" href="./pages/recipe.html">
+                        <img class="item-img recipe-img" src="./assets/placeholder.png" />
+                    </a>
+                </div><div class="item-group recipe-item-group grid-item-1">
+                    <a class="item-link recipe-link" href="./pages/recipe.html">
+                        <img class="item-img recipe-img" src="./assets/placeholder.png" />
+                    </a>
+                </div>
+                
+                <div class="item-group recipe-item-group grid-item-2">
+                    <a class="item-link recipe-link" href="./pages/recipe.html">
+                        <img class="item-img recipe-img" src="./assets/placeholder.png" />
+                    </a>
+                </div>
+                
+                <div class="item-group recipe-item-group grid-item-3">
+                    <a class="item-link recipe-link" href="./pages/recipe.html">
+                        <img class="item-img recipe-img" src="./assets/placeholder.png" />
+                    </a>
+                </div>
+    
+                <div class="item-group recipe-item-group grid-item-4">
+                    <a class="item-link recipe-link" href="./pages/recipe.html">
+                        <img class="item-img recipe-img" src="./assets/placeholder.png" />
+                    </a>
+                </div>
+                
+                <!-- View More button -->
+                <button id="recipe-view-more-button" class="view-more-button" type="button">
+                    <div class="right-arrow">&#8594;</div><br>
+                    <div class="view-more-text">View More</div>
+                </button>
+            </div>
+        </div>
+        <div id="home-recipes-container" class="top-level-container home-top-level-container home-featured-items">
+            <h2 id="home-recipes-title" class="categs-title title">Featured Recipes</h2>
+            <!-- TODO: add hover functionality to items -->
+            <div id="recipe-items-container" class="items-container">
+                <div class="item-group recipe-item-group grid-item-1">
+                    <a class="item-link recipe-link" href="./pages/recipe.html">
+                        <img class="item-img recipe-img" src="./assets/placeholder.png" />
+                    </a>
+                </div><div class="item-group recipe-item-group grid-item-1">
+                    <a class="item-link recipe-link" href="./pages/recipe.html">
+                        <img class="item-img recipe-img" src="./assets/placeholder.png" />
+                    </a>
+                </div>
+                
+                <div class="item-group recipe-item-group grid-item-2">
+                    <a class="item-link recipe-link" href="./pages/recipe.html">
+                        <img class="item-img recipe-img" src="./assets/placeholder.png" />
+                    </a>
+                </div>
+                
+                <div class="item-group recipe-item-group grid-item-3">
+                    <a class="item-link recipe-link" href="./pages/recipe.html">
+                        <img class="item-img recipe-img" src="./assets/placeholder.png" />
+                    </a>
+                </div>
+    
+                <div class="item-group recipe-item-group grid-item-4">
+                    <a class="item-link recipe-link" href="./pages/recipe.html">
+                        <img class="item-img recipe-img" src="./assets/placeholder.png" />
+                    </a>
+                </div>
+                
+                <!-- View More button -->
+                <button id="recipe-view-more-button" class="view-more-button" type="button">
+                    <div class="right-arrow">&#8594;</div><br>
+                    <div class="view-more-text">View More</div>
+                </button>
+            </div>
+        </div>
+        <!-- TODO: move this to JS so we can add more rows dynamically -->
+        <div id="home-products-container" class="top-level-container home-top-level-container home-featured-items">
+            <h2 id="home-products-title" class="categs-title title">Features Groceries</h2>
+            <!-- TODO: add hover functionality to items -->
+            <div id="product-items-container" class="items-container">
+                <div class="item-group product-item-group grid-item-1">
+                    <a class="item-link product-link" href="./pages/product.html">
+                        <img class="item-img product-img" src="./assets/placeholder.png" />
+                    </a>
+                </div>
+                
+                <div class="item-group product-item-group grid-item-2">
+                    <a class="item-link product-link" href="./pages/product.html">
+                        <img class="item-img product-img" src="./assets/placeholder.png" />
+                    </a>
+                </div>
+                
+                <div class="item-group product-item-group grid-item-3">
+                    <a class="item-link product-link" href="./pages/product.html">
+                        <img class="item-img product-img" src="./assets/placeholder.png" />
+                    </a>
+                </div>
+                
+                <div class="item-group product-item-group grid-item-4">
+                    <a class="item-link product-link" href="./pages/product.html">
+                        <img class="item-img product-img" src="./assets/placeholder.png" />
+                    </a>
+                </div>
+    
+                 <div class="item-group product-item-group grid-item-5">
+                    <a class="item-link product-link" href="./pages/product.html">
+                        <img class="item-img product-img" src="./assets/placeholder.png" />
+                    </a>
+                </div>
+    
+                <!-- TODO: add functionality -->
+                <button id="product-view-more-button" class="view-more-button" type="button">
+                    <div class="right-arrow">&#8594;</div><br>
+                    <div class="view-more-text">View More</div>
+                </button>
+            </div>
+    
+        </div>
+
+
+    </div>
+
+    <script src="./scripts/header.js"></script>
+    <script type="module" src="./scripts/index.js"></script>
+</body>
+
+</html>

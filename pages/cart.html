@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart - Site Name</title>
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/cart.css" />
+</head>
+
+<!-- TODO: import header -->
+<!-- TODO: replace hardcoded values with dynamic results -->
+<!-- TODO: we can move inline JS to a separate script file -->
+<body>
+    <h1 class="page-title">Cart</h1>
+    <!-- TODO: move this to JS so we can add more rows dynamically -->
+    <div id="cart-recipes-container" class="top-level-container cart-top-level-container">
+        <h2 class="sub-title">Recipes</h2>
+        <div class="cart-recipe-item-group">
+            <div class="cart-recipe-left">
+                <a class="item-link recipe-link" href="../pages/recipe.html">
+                    <span class="cart-recipe-name">Banana Pancakes</span>
+                </a>
+                <div class="cart-recipe-quantity-group">
+                    <label class="cart-recipe-quantity-label number-label"
+                            for="recipe-quantity">Quantity&nbsp;</label>
+                    <input class="cart-recipe-quantity-input number-input"
+                            type="number" name="recipe-quantity" value="1" />
+                </div>
+                <!-- TODO: add functionality -->
+                <button class="cart-recipe-delete-button" type="button">Delete</button>
+            </div>
+            <div class="cart-recipe-right">
+                <span class="cart-price recipe-price">$13.74</span>
+                <!-- TODO: implement functionality -->
+                <button class="cart-recipe-collapse-button" type="button">v</button>
+            </div>
+            <div class="cart-recipe-product-container">
+                <div class="cart-product-item-group">
+                    <a class="item-link product-link" href="../pages/product.html">
+                        <img class="item-img product-img cart-img" src="../assets/placeholder.png" />
+                    </a>
+                    <div class="cart-product-left">
+                        <a class="item-link product-link" href="../pages/product.html">
+                            <span class="cart-product-name">Bananas</span>
+                        </a>
+                        <div class="cart-product-quantity-group">
+                            <label class="cart-product-quantity-label number-label"
+                                    for="product-quantity">Quantity&nbsp;</label>
+                            <input class="cart-product-quantity-input number-input"
+                                    type="number" name="product-quantity" value="1" />
+                        </div>
+                        <!-- TODO: add functionality -->
+                        <button class="cart-product-delete-button" type="button">Delete</button>
+                    </div>
+                    <div class="cart-product-right">
+                        <span class="cart-price product-price">$1.36</span>
+                    </div>
+                </div>
+                <div class="cart-product-item-group">
+                    <a class="item-link product-link" href="../pages/product.html">
+                        <img class="item-img product-img cart-img" src="../assets/placeholder.png" />
+                    </a>
+                    <div class="cart-product-left">
+                        <a class="item-link product-link" href="../pages/product.html">
+                            <span class="cart-product-name">Dozen Eggs</span>
+                        </a>
+                        <div class="cart-product-quantity-group">
+                            <label class="cart-product-quantity-label number-label"
+                                    for="product-quantity">Quantity&nbsp;</label>
+                            <input class="cart-product-quantity-input number-input"
+                                    type="number" name="product-quantity" value="1" />
+                        </div>
+                        <!-- TODO: add functionality -->
+                        <button class="cart-product-delete-button" type="button">Delete</button>
+                    </div>
+                    <div class="cart-product-right">
+                        <span class="cart-price product-price">$12.38</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="cart-products-container" class="top-level-container cart-top-level-container">
+        <h2 class="sub-title">Products</h2>
+        <div class="cart-product-item-group">
+            <a class="item-link product-link" href="../pages/product.html">
+                <img class="item-img product-img cart-img" src="../assets/placeholder.png" />
+            </a>
+            <div class="cart-product-left">
+                <a class="item-link product-link" href="../pages/product.html">
+                    <span class="cart-product-name">Carrots</span>
+                </a>
+                <div class="cart-product-quantity-group">
+                    <label class="cart-product-quantity-label number-label"
+                            for="product-quantity">Quantity&nbsp;</label>
+                    <input class="cart-product-quantity-input number-input"
+                            type="number" name="product-quantity" value="1" />
+                </div>
+                <!-- TODO: add functionality -->
+                <button class="cart-product-delete-button" type="button">Delete</button>
+            </div>
+            <div class="cart-product-right">
+                <span class="cart-price product-price">$5.29</span>
+            </div>
+        </div>
+    </div>
+    <div id="cart-total-container" class="top-level-container cart-top-level-container">
+        <span id="cart-subtotal">Subtotal: $19.03</span>
+        <button id="cart-checkout-button" type="button"
+                onclick="document.getElementById('cart-login-popup').showModal()">Proceed to Checkout</button>
+    </div>
+    <dialog id="cart-login-popup">
+        <form method="dialog">
+            <button id="cart-popup-close" type="button"
+                    onclick="document.getElementById('cart-login-popup').close()">X</button>
+            <button id="cart-login-button" class="cart-popup-option"
+                    type="button" onclick="location.href='./login.html'">Log In</button>
+            <button id="cart-guest-button" class="cart-popup-option"
+                    type="button" onclick="location.href='./checkout.html'">Checkout as Guest</button>
+        </form>
+    </dialog>
+    <script src="../scripts/header.js"></script>
+    <script src="../scripts/cart.js"></script>
+</body>
+
+</html>

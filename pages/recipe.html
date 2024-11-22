@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe - Site Name</title>
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/recipe.css" />
+</head>
+
+<!-- TODO: import header -->
+<!-- TODO: replace hardcoded values with dynamic results -->
+<body>
+    <div id="recipe-info-container" class="top-level-container recipe-top-level-container">
+        <div class="recipe-info-top">
+            <div id="recipe-info-left">
+                <h1 class="page-title">Banana Pancakes</h1>
+                <span id="recipe-review-summary">23 Reviews</span>
+                <span id="recipe-desc">Easy to make fluffy banana pancakes.</span>
+            </div>
+            <div id="recipe-info-right">
+                <img id="recipe-main-img" class="recipe-img" src="../assets/banana-recipe.jpg" />
+            </div>
+        </div>
+        <div id="recipe-info-bottom">
+            <div class="recipe-info-group">
+                <span class="recipe-info-name">Prep Time</span>
+                <span class="recipe-info-value">10 mins</span>
+            </div>
+            <div class="recipe-info-group">
+                <span class="recipe-info-name">Cook Time</span>
+                <span class="recipe-info-value">5 mins</span>
+            </div>
+            <!-- TODO: add serving functionality -->
+            <div class="recipe-info-group">
+                <label id="recipe-serves-label" class="recipe-info-name number-label"
+                        for="recipe-serves">Serves</label>
+                <input id="recipe-serves-input" class="recipe-info-value number-input"
+                        type="number" name="recipe-serves" value="4" />
+            </div>
+
+            <div class="recipe-info-group">
+                <span class="recipe-info-name">Nutritional Info</span>
+            </div>
+        </div>
+    </div>
+    <div id="recipe-options-container" class="top-level-container recipe-top-level-container">
+        <!-- TODO: add functionality -->
+        <button id="buy-ingredients-button" class="recipe-option-button"
+                type="button">Buy Ingredients</button>
+        <button id="print-button" class="recipe-option-button-img"
+                type="button">P</button>
+        <button id="units-button" class="recipe-option-button-img"
+                type="button">S</button>
+    </div>
+    <div class="recipe-ingredient-direction-buy-container">
+        <div class="recipe-ingredient-direction-buy-container-left">
+            <div id="recipe-ingredients-container" class="top-level-container">
+                <h2 class="recipe-container-title">Ingredients</h2>
+                <!-- TODO: add functionality -->
+                <div class="recipe-ingredients-checkbox-group">
+                    <input class="ingredients-checkbox checkbox-input"
+                            type="checkbox" name="ingredient" value="ingredient" />
+                    <label class="ingredients-label checkbox-label"
+                            for="ingredient">1 Ripe Banana</label>
+                </div>
+            </div>
+        </div>
+        <div class="recipe-ingredient-direction-buy-container-right">
+            <div id="recipe-directions-container" class="top-level-container recipe-top-level-container">
+                <h2 class="recipe-container-title">Directions</h2>
+                <div id="recipe-directions-steps">
+                    <div class="recipe-step-group">
+                        <div class="recipe-step">
+                            <span class="recipe-step-number">Step 1:</span>
+                            <span class="recipe-step-instructions">Mash banana in a bowl until smooth.</span>
+                        </div>
+                        <!-- TODO: add popup functionality -->
+                        <img class="recipe-step-img" src="../assets/placeholder.png" />
+                    </div>
+                </div>
+            </div>
+            <div id="recipe-buy-container" class="top-level-container recipe-top-level-container">
+                <h2 class="recipe-container-title">Buy Ingredients</h2>
+                <div class="recipe-buy-group">
+                    <span class="recipe-buy-name">1 Ripe Banana</span>
+                    <!-- TODO: add hover functionality to items -->
+                    <!-- TODO: move this to JS so we can display results dynamically -->
+                    <div class="recipe-buy-rec">
+                        <div class="item-group product-item-group">
+                            <a class="item-link product-link" href="../pages/product.html">
+                                <img class="item-img product-img" src="../assets/placeholder.png" />
+                            </a>
+                        </div>
+                        <div class="item-group product-item-group">
+                            <a class="item-link product-link" href="../pages/product.html">
+                                <img class="item-img product-img" src="../assets/placeholder.png" />
+                            </a>
+                        </div>
+                        <div class="item-group product-item-group">
+                            <a class="item-link product-link" href="../pages/product.html">
+                                <img class="item-img product-img" src="../assets/placeholder.png" />
+                            </a>
+                        </div>
+                        <!-- TODO: add functionality -->
+                        <button class="view-more-button" type="button">View More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="recipe-reviews-container" class="top-level-container recipe-top-level-container">
+        <h2 class="recipe-container-title">Reviews</h2>
+        <!-- TODO: move this to JS so we can add more reviews dynamically -->
+        <div class="review-group">
+            <span class="reviewer-name">Janelle</span>
+            <span class="reviewer-stars">****</span>
+            <p class="reviewer-comment">This recipe is AWESOME!</p>
+        </div>
+    </div>
+    <script src="../scripts/header.js"></script>
+    <script type="module" src="../scripts/recipe.js"></script>
+</body>
+
+</html>

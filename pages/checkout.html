@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - Site Name</title>
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/checkout.css" />
+</head>
+
+<!-- TODO: import header -->
+<!-- TODO: replace hardcoded values with dynamic results -->
+<body>
+    <h1 class="page-title">Checkout</h1>
+    <div id="checkout-date-container" class="top-level-container checkout-top-level-container">
+        <div id="checkout-date-top" class="checkout-top-bar">
+            <h2 class="sub-title">Delivery Date</h2>
+            <!-- TODO: add functionality -->
+            <button id="checkout-date-collapse-button" class="checkout-collapse-button"
+                    type="button">v</button>
+        </div>
+        <div id="checkout-calendar-group" class="checkout-input-group">
+            <input id="checkout-calendar-input" class="checkout-input calendar-input"
+                    type="datetime-local" name="checkout-calendar" />
+        </div>
+    </div>
+    <div id="checkout-location-container" class="top-level-container checkout-top-level-container">
+        <div id="checkout-location-top" class="checkout-top-bar">
+            <h2 class="sub-title">Delivery Location</h2>
+            <!-- TODO: add functionality -->
+            <button id="checkout-location-collapse-button" class="checkout-collapse-button"
+                    type="button">v</button>
+        </div>
+        <div id="checkout-address-group" class="checkout-input-group">
+            <label id="checkout-address-label" class="checkout-label text-label"
+                    for="checkout-address">Address</label>
+            <input id="checkout-address-input" class="checkout-input text-input"
+                    type="text" name="checkout-address" />
+        </div>
+        <div id="checkout-state-group" class="checkout-input-group">
+            <label id="checkout-state-label" class="checkout-label text-label"
+                    for="checkout-state">State/Province</label>
+            <input id="checkout-state-input" class="checkout-input text-input"
+                    type="text" name="checkout-state" />
+        </div>
+        <!-- TODO: once we have all the countries, we could make this a searchable dropdown -->
+        <div id="checkout-country-group" class="checkout-input-group">
+            <label id="checkout-country-label" class="checkout-label text-label"
+                    for="checkout-country">Country</label>
+            <input id="checkout-country-input" class="checkout-input text-input"
+                    type="text" name="checkout-country" />
+        </div>
+    </div>
+    <div id="checkout-payment-container" class="top-level-container checkout-top-level-container">
+        <div id="checkout-payment-top" class="checkout-top-bar">
+            <h2 class="sub-title">Payment</h2>
+            <!-- TODO: add functionality -->
+            <button id="checkout-payment-collapse-button" class="checkout-collapse-button"
+                    type="button">v</button>
+        </div>
+        <div id="checkout-card-num-group" class="checkout-input-group">
+            <label id="checkout-card-num-label" class="checkout-label number-label"
+                    for="checkout-card-num">Card Number</label>
+            <input id="checkout-card-num-input" class="checkout-input number-input"
+                    type="number" name="checkout-card-num" />
+        </div>
+        <div id="checkout-cvc-group" class="checkout-input-group">
+            <label id="checkout-cvc-label" class="checkout-label number-label"
+                    for="checkout-cvc">CVC/CVV</label>
+            <input id="checkout-cvc-input" class="checkout-input number-input"
+                    type="number" name="checkout-cvc" />
+        </div>
+        <div id="checkout-expiration-group" class="checkout-input-group">
+            <label id="checkout-expiration-label" class="checkout-label text-label"
+                    for="checkout-expiration">Expiration Date</label>
+            <input id="checkout-expiration-input" class="checkout-input text-input"
+                    type="text" name="checkout-expiration" />
+        </div>
+    </div>
+    <div id="checkout-order-container" class="top-level-container checkout-top-level-container">
+        <div id="checkout-order-top" class="checkout-top-bar">
+            <h2 class="sub-title">Order Summary</h2>
+            <!-- TODO: add functionality -->
+            <button id="checkout-order-collapse-button" class="checkout-collapse-button"
+                    type="button">v</button>
+        </div>
+        <div class="checkout-product-item-group">
+            <img class="item-img product-img checkout-img" src="../assets/placeholder.png" />
+            <div class="checkout-product-left">
+                <span class="checkout-product-name">Carrots</span>
+                <div class="checkout-product-quantity-group">
+                    <label class="checkout-product-quantity-label number-label"
+                            for="product-quantity">Quantity&nbsp;</label>
+                    <input class="checkout-product-quantity-input number-input"
+                            type="number" name="product-quantity" value="1" disabled />
+                </div>
+            </div>
+            <div class="checkout-product-right">
+                <span class="checkout-price product-price">$5.29</span>
+            </div>
+        </div>
+    </div>
+    <div id="checkout-total-container" class="top-level-container checkout-top-level-container">
+        <div id="checkout-total-delivery-group" class="checkout-total-group">
+            <div class="checkout-delivery-field-group">
+                <span class="checkout-delivery-field-name">Address:</span>
+                <span id="delivery-address-value" class="checkout-delivery-field-value">123 School St.</span>
+            </div>
+            <div class="checkout-delivery-field-group">
+                <span class="checkout-delivery-field-name">Date:</span>
+                <span id="delivery-date-value" class="checkout-delivery-field-value">Nov. 1, 2024</span>
+            </div>
+            <div class="checkout-delivery-field-group">
+                <span class="checkout-delivery-field-name">Time:</span>
+                <span id="delivery-time-value" class="checkout-delivery-field-value">12:00pm</span>
+            </div>
+        </div>
+        <div id="checkout-total-price-group" class="checkout-total-group">
+            <div class="checkout-price-field-group">
+                <span class="checkout-price-field-name">Subtotal:</span>
+                <span id="price-subtotal-value" class="checkout-price-field-value">$5.29</span>
+            </div>
+            <div class="checkout-price-field-group">
+                <span class="checkout-price-field-name">Tax:</span>
+                <span id="price-tax-value" class="checkout-price-field-value">$0.37</span>
+            </div>
+            <div class="checkout-price-field-group">
+                <span class="checkout-price-field-name">Grand Total:</span>
+                <span id="price-grand-total-value" class="checkout-price-field-value">$5.66</span>
+            </div>
+        </div>
+        <!-- TODO: add functionality -->
+        <button id="checkout-button" type="button">Checkout</button>
+    </div>
+    <script src="../scripts/header.js"></script>
+    <script src="../scripts/checkout.js"></script>
+</body>
+
+</html>

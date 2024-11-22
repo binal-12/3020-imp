@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header - Site Name</title>
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <style>
+
+        body {
+            margin: 0;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #ccc;
+        }
+        .logo-container {
+            font-size: 60px;
+            font-weight: bold;
+        }
+        .nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .searchbar {
+            flex-grow: 1;
+            margin: 0 20px;
+            display: flex;
+            align-items: center;
+        }
+        .search-input {
+            padding: 5px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            font-size: 20px;
+        }
+        .icon {
+            margin-right: 5px;
+        }
+        .flyout-menu{
+            display: none;
+            visibility: hidden;
+        }
+        .toggle {
+            margin-bottom: 10px;
+        }
+        .right-nav {
+            flex-grow: 0;
+            display: flex;
+            justify-content: right;
+        }
+        .left-nav{
+            flex-grow: 0;
+            display: flex;
+            justify-content: left;
+        }
+        .middle-nav {
+            display: flex;
+            justify-content: center;
+            flex-grow: 1;
+            margin: 0 20px 0 20px;
+        }
+        .search-box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        .searchbar, .search-input{
+            width: 100%;
+        }
+        .search-input{
+            padding: 5px 10px 5px 10px;
+        }
+    </style>
+</head>
+
+
+
+<div class="header-container">
+    <div class="left-nav nav">
+        <div class="logo-container">GROCER</div>
+        <section class="header-button-section">
+            <button id="menu-toggle" aria-expanded="false" aria-controls="flyout-menu">
+                Categories
+            </button>
+            <div class="flyout-menu">
+            </div>
+        </section>
+    </div>
+    <div class="middle-nav nav">
+        <div class="search-box">
+            <div class="toggle">
+                <button class="toggle-button">Recipes</button>
+                <button class="toggle-button">Products</button>
+            </div>
+            <div class="searchbar">
+                <input class ="search-input" type="text" placeholder="Search Recipes">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="right-nav nav">
+
+        <button class="language-button" aria-expanded="false" aria-controls="flyout-menu">
+            <span class="icon">🍁</span> EN
+        </button>
+        <section class="profile-container">
+            <button class="Profile-Button" aria-expanded="false" aria-controls="flyout-menu">
+                <span class="single-icon">👤</span>
+            </button>
+            <div class="flyout-menu">
+                <ul class="menu-list">
+                    <li class="menu-item">Log In</li>
+                    <li class="menu-item">Settings</li>
+                    <li class="menu-item">Log Out</li>
+                </ul>
+            </div>
+        </section>
+        <button class="Cart-Button" aria-expanded="false" aria-controls="flyout-menu">
+            <span class="icon">🛒</span> $10.00
+        </button>
+    </div>
+
+</div>
+</html>
